@@ -6,7 +6,7 @@
 /*   By: mbrignol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:48:55 by mbrignol          #+#    #+#             */
-/*   Updated: 2019/11/05 17:45:10 by mbrignol         ###   ########.fr       */
+/*   Updated: 2019/11/06 10:17:08 by mbrignol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	char			*d;
 
 	i = 0;
-	y = 0;
 	s = (char*)s1;
 	d = (char*)s2;
 	if (ft_strlen(d) == 0)
@@ -29,6 +28,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 		return (NULL);
 	while (s[i] && i < n)
 	{
+		y = 0;
 		while (d[y] == s[i + y] && i + y < n)
 		{
 			y++;

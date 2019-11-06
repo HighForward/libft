@@ -6,7 +6,7 @@
 /*   By: mbrignol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:08:59 by mbrignol          #+#    #+#             */
-/*   Updated: 2019/11/05 16:16:10 by mbrignol         ###   ########.fr       */
+/*   Updated: 2019/11/06 18:06:17 by mbrignol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
-
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 #endif

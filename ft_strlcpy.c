@@ -6,7 +6,7 @@
 /*   By: mbrignol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:45:15 by mbrignol          #+#    #+#             */
-/*   Updated: 2019/11/05 18:06:52 by mbrignol         ###   ########.fr       */
+/*   Updated: 2019/11/06 17:19:31 by mbrignol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	unsigned int	i;
 	char			*s;
-
+	
+	if (dst == NULL || src == NULL)
+		return (0);
 	s = (char*)src;
 	i = 0;
 	if (size == 0)

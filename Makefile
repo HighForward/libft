@@ -25,7 +25,12 @@ FILES		= ft_atoi.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_calloc.c \
-			ft_strdup.c
+			ft_strdup.c \
+			ft_substr.c \
+			ft_strjoin.c \
+			ft_strtrim.c \
+			ft_split.c \
+			ft_itoa.c
 OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)

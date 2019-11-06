@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrignol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 10:35:26 by mbrignol          #+#    #+#             */
-/*   Updated: 2019/11/06 12:59:43 by mbrignol         ###   ########.fr       */
+/*   Created: 2019/11/06 11:17:14 by mbrignol          #+#    #+#             */
+/*   Updated: 2019/11/06 12:58:06 by mbrignol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t count)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	i;
-	unsigned int	j;
+	char	*join;
+	int		size;
+	
+	if (!s1 || !s2)
+		return (NULL);
+	size = ft_strlen((char*)s1) + ft_strlen((char*)s2) + 1;
+	if (!(join = (char*)malloc(sizeof(char) * size)))
+		return (NULL);
+	ft_strlcpy(join, s1, size);
+	ft_strlcat(join, s2, size);
+	return (join);
 
-	j = 0;
-	while (dst[j] && j < count)
-		j++;
-	i = j;
-	while (src[j - i] && j + 1 < count)
-	{
-		dst[j] = src[j - i];
-		j++;
-	}
-	if (i < count)
-		dst[j] = '\0';
-	return (i + ft_strlen((char*)src));
 }
